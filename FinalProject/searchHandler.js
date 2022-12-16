@@ -44,6 +44,7 @@ async function search(phrase, opt) {
         avgRating: data.results[0].vote_average,
       };
     } else if (opt === 'tv') {
+      console.log(1)
       return {
         title: data.results[0].name,
         overview: data.results[0].overview,
@@ -55,3 +56,5 @@ async function search(phrase, opt) {
     console.error(error);
   }
 }
+
+search("test", "tv")
