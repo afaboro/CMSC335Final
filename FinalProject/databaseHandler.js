@@ -12,12 +12,14 @@ const database = {
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = `mongodb+srv://${user}:${pass}@cluster0.pz8inny.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${database.user}:${database.password}@cluster0.xq6xvs0.mongodb.net/?retryWrites=true&w=majority`;
+
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverApi: ServerApiVersion.v1,
 });
+
 client.connect();
 
 // TODO: access MongoDB and export methods to movieServer.js
