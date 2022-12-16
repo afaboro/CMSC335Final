@@ -5,15 +5,16 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Movie Results</title>
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 
 <body>
 	<h1>Movie Results</h1>
 	<img src=<%- img %>>
 	<div>
-		Title: <%- title %><br>
-		Overview: <%- overview %><br>
-		Average Rating: <%- avgRating %>
+		<strong>Title:</strong> <%- title %><br>
+		<strong>Overview:</strong> <%- overview %><br>
+		<strong>Average Rating:</strong> <%- avgRating %>
 	</div>
 	<form method="post" action="processResult">
 		<label>
@@ -26,6 +27,7 @@
 		</select>
 		<input type="submit" value="Search" />
 	  </form>
+	  <a href="/"><u>HOME</u></a>
 </body>
 
 </html>
