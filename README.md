@@ -1,6 +1,12 @@
 # CMSC335Final
 Final Project for CMSC335
 
-Team: Anuoluwapo Faboro, Joy Tijani
+[Insert App Description]
+[Demo Link]
 
-This product uses the TMDB API but is not endorsed or certified by TMDB.
+Team: 
+- Anuoluwapo Faboro (afaboro)
+- Joy Tijani (jtijani)
+- Kofi Owusu Mensah
+
+This product uses the [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction) but is not endorsed or certified by TMDB.
