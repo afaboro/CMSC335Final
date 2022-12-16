@@ -1,13 +1,16 @@
 process.stdin.setEncoding('utf8');
 
-let http = require('http');
-let path = require('path');
-let express = require('express');
-let app = express();
-const portNumber = process.argv[2];
-var bodyParser = require('body-parser');
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const searchHandler = require('./searchHandler');
 
-http.createServer(app).listen(portNumber);
+const app = express();
+const portNumber = 4444;
+
+app.listen(portNumber);
+console.log(`Web server running at http://localhost:${portNumber}`);
+
 /* directory where templates will reside */
 app.set('views', path.resolve(__dirname, 'templates'));
 
@@ -18,10 +21,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/css', express.static(__dirname + '/css'));
 
 app.get('/', function (request, response) {
-  response.render('index.ejs');
+  response.render('index');
 });
 
-app.post('/', function (request, response) {
-  console.log(request.body)
-  response.render('result.ejs');
+app.post('/processResult', async function (request, response) {
+  const { searchVal, opts } = request.body;
+  const config = await searchHandler.configuration();
+  const result = await searchHandler.search(searchVal, opts);
+
+  console.log(config);
+  console.log();
+  console.log(result);
 });

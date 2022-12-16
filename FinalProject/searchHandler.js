@@ -3,7 +3,6 @@ require('dotenv').config({
   path: path.resolve(__dirname, 'credentials/.env'),
 });
 const fetch = require('node-fetch');
-const { encode } = require('punycode');
 
 const TMBD_API_KEY = process.env.TMBD_API_KEY;
 const api = 'https://api.themoviedb.org/3';
@@ -15,7 +14,6 @@ const configuration = async () => {
     );
 
     const data = await response.json();
-    console.log(data);
 
     return {
       base_url: data.images.base_url,
@@ -44,7 +42,7 @@ async function search(phrase, opt) {
         avgRating: data.results[0].vote_average,
       };
     } else if (opt === 'tv') {
-      console.log(1)
+      console.log(1);
       return {
         title: data.results[0].name,
         overview: data.results[0].overview,
@@ -57,4 +55,7 @@ async function search(phrase, opt) {
   }
 }
 
-search("test", "tv")
+module.exports = {
+  configuration,
+  search,
+};
