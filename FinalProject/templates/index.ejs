@@ -1,20 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Movie Reviews</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<title>Movie Reviews</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-	<h1>Movie Reviews</h1>
-	<form method="post" action="/">
-        <label><strong>Search: </strong><input type="text" name="searchVal" placeholder="Movie or TV Name"/></label>
-        <input type="submit" value="Search" />
+  <body>
+    <h1>Movie Reviews</h1>
+    <form method="post" action="processResult">
+      <label>
+        <strong>Search:</strong>
+        <input type="text" name="searchVal" placeholder="Movie or TV Name" />
+      </label>
+      <select name="opts">
+        <option value="movie">Movie</option>
+        <option value="tv">TV</option>
+      </select>
+      <input type="submit" value="Search" />
     </form>
     <button type="button">See Recent Searches</button>
-	<hr>
-</body>
-
+    <hr />
+  </body>
 </html>
