@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>Movie Reviews</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <h1>Movie Reviews</h1>
-    <form method="post" action="processResult">
+    <form method="post" action="result">
       <label>
         <strong>Search:</strong>
         <input type="text" name="searchVal" placeholder="Movie or TV Name" />
@@ -19,7 +19,10 @@
       </select>
       <input type="submit" value="Search" />
     </form>
-    <button type="button">See Recent Searches</button>
+    <br />
+    <form method="post" action="recent_searches">
+      <input type="submit" value="See Recent Searches" />
+    </form>
     <hr />
   </body>
 </html>
