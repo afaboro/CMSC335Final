@@ -1,10 +1,22 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    background-color: lightblue;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: lightblue;
 }
 
-button, input, select {
-    font-family : inherit;
-    font-size: 1em;
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+table,
+th,
+td {
+  text-align: center;
+  border: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aliceblue;
 }
