@@ -29,7 +29,11 @@ app.post('/processResult', async function (request, response) {
   const config = await searchHandler.configuration();
   const result = await searchHandler.search(searchVal, opts);
 
-  console.log(config);
-  console.log();
-  console.log(result);
+  variable = {
+    img: config.base_url+config.size+result.img,
+    title: result.title,
+    overview: result.overview,
+    avgRating: result.avgRating
+  }
+  response.render("result", variable);
 });

@@ -9,11 +9,23 @@
 
 <body>
 	<h1>Movie Results</h1>
-	<form action="http://localhost:6500/" method="post">
-	<fieldset>
-		
-	</fieldset>
-	</form>
+	<img src=<%- img %>>
+	<div>
+		Title: <%- title %><br>
+		Overview: <%- overview %><br>
+		Average Rating: <%- avgRating %>
+	</div>
+	<form method="post" action="processResult">
+		<label>
+		  <strong>Search:</strong>
+		  <input type="text" name="searchVal" placeholder="Movie or TV Name" />
+		</label>
+		<select name="opts">
+		  <option value="movie">Movie</option>
+		  <option value="tv">TV</option>
+		</select>
+		<input type="submit" value="Search" />
+	  </form>
 </body>
 
 </html>
