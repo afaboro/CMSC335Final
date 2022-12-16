@@ -6,18 +6,26 @@
     <title>Movie Results</title>
   </head>
 
+  <head>
+    <meta charset="utf-8" />
+    <title>Movie Results</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+
   <body>
     <h1>Movie Results</h1>
     <img src="<%- img %>" />
     <div>
-      Title: <%- title %>
+      <strong>Title:</strong>
+      <%- title %>
       <br />
-      Overview: <%- overview %>
+      <strong>Overview:</strong>
+      <%- overview %>
       <br />
-      Average Rating: <%- avgRating %>
+      <strong>Average Rating:</strong>
+      <%- avgRating %>
     </div>
-    <br />
-    <form method="post" action="result">
+    <form method="post" action="processResult">
       <label>
         <strong>Search:</strong>
         <input type="text" name="searchVal" placeholder="Movie or TV Name" />
@@ -28,7 +36,6 @@
       </select>
       <input type="submit" value="Search" />
     </form>
-    <hr />
-    <a href="/">HOME</a>
+    <a href="/"><u>HOME</u></a>
   </body>
 </html>
