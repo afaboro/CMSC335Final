@@ -36,7 +36,7 @@ app.post('/result', async function (request, response) {
       .collection(process.env.MONGO_COLLECTION)
       .insertOne({ val: searchVal });
   } catch (error) {
-    console.error(e);
+    console.error(error);
   } finally {
     await databaseHandler.client.close();
   }
@@ -97,7 +97,7 @@ app.post('/clear', async (request, response) => {
       .collection(process.env.MONGO_COLLECTION)
       .deleteMany({});
   } catch (error) {
-    console.error(e);
+    console.error(error);
   } finally {
     await databaseHandler.client.close();
   }
