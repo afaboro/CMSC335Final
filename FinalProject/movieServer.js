@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const searchHandler = require('./searchHandler');
+const databaseHandler = require('./databaseHandler');
 
 const app = express();
 const portNumber = 4444;
@@ -26,6 +27,7 @@ app.get('/', function (request, response) {
 
 app.post('/processResult', async function (request, response) {
   const { searchVal, opts } = request.body;
+  await databaseHandler.client.db(process.env.MONGO_DB_NAME).collection(process.env.MONGO_COLLECTION).insertOne({val: searchVal});
   const config = await searchHandler.configuration();
   const result = await searchHandler.search(searchVal, opts);
 
