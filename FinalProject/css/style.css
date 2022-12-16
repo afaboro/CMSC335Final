@@ -1,0 +1,10 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    background-color: lightblue;
+}
+
+button, input, select {
+    font-family : inherit;
+    font-size: 1em;
+}
