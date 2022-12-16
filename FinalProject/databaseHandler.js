@@ -23,3 +23,6 @@ const client = new MongoClient(uri, {
 client.connect();
 
 // TODO: access MongoDB and export methods to movieServer.js
+module.exports = {
+  client,
+};
