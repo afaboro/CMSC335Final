@@ -21,30 +21,7 @@ app.get('/', function (request, response) {
   response.render('index.ejs');
 });
 
-app.get('/favoriteForm', (request, response) => {
-  let variables = {
-    port: portNumber,
-  };
-  response.render('favoriteForm', variables);
-});
-
-app.post('/favoriteForm', (request, response) => {
-  let variables = {
-    port: portNumber,
-  };
-  response.render('processForm', variables);
-});
-
-app.get('/favoritesList', (request, response) => {
-  let variables = {
-    name: request.body.name,
-    email: request.body.email,
-    gpa: request.body.gpa,
-    background: request.body.background,
-  };
-  response.render('favoritesList', variables);
-  client
-    .db(databaseAndCollection.db)
-    .collection(databaseAndCollection.collection)
-    .insertOne(variables);
+app.post('/', function (request, response) {
+  console.log(request.body)
+  response.render('result.ejs');
 });
