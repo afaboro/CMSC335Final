@@ -2,8 +2,8 @@
 Final Project for CMSC335
 
 Searches and retrieves TV shows and movies from TMDB. 
-[WEB](https://eager-bass-shoulder-pads.cyclic.app/)
-[DEMO](https://youtu.be/LNtuCIESmEs)
+- [APP](https://eager-bass-shoulder-pads.cyclic.app/)
+- [DEMO](https://youtu.be/LNtuCIESmEs)
 
 Team: 
 - Anuoluwapo Faboro (afaboro)
