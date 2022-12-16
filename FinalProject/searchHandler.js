@@ -17,7 +17,7 @@ const configuration = async () => {
 
     return {
       base_url: data.images.base_url,
-      size: data.images.poster_sizes[4],
+      size: data.images.poster_sizes[3],
     };
   } catch (error) {
     console.error(error);
